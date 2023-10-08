@@ -15,8 +15,9 @@ export function isBase64Image(imageData: string) {
 // created by chatgpt
 export function formatDateString(dateString: string) {
   const options: Intl.DateTimeFormatOptions = {
+    timeZone: "Asia/Seoul",
     year: "numeric",
-    month: "short",
+    month: "long",
     day: "numeric",
   };
 
@@ -24,7 +25,7 @@ export function formatDateString(dateString: string) {
   const formattedDate = date.toLocaleDateString(undefined, options);
 
   const time = date.toLocaleTimeString([], {
-    hour: "numeric",
+    hour: "2-digit",
     minute: "2-digit",
   });
 
